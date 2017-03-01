@@ -1,0 +1,60 @@
+<% include ./partials/header %>
+
+<h1>Movie Title: </h1>
+
+<form action="/results" method="/get">
+	<div class="ui grid"> 
+		<div class="eight wide column">
+			<div class="ui fluid icon input">
+				<input type="text" name="search" placeholder="Search..." id="searchbar">
+				<i class="search icon"></i>
+			</div>
+		</div>
+	</div>
+	<input type="submit" class="ui inverted violet button" id="searchbtn">
+</form>
+
+<% if (typeof data == "undefined") { %>
+	<% console.log('Data object not defined'); %>
+<% } else if (typeof data == "object" && Object.keys(data).length > 10) {%>
+	<%console.log(Object.keys(data).length) %>
+	<h4 class="ui horizontal divider header" id="line">
+  		<i class="tag icon"></i>
+  		Description
+	</h4>
+	<div id="content">
+		<h3> <%=data["Title"]%> - <%=data["Year"]%></h3>
+		<div>
+		<img class="ui small rounded image" src='<%=data["Poster"]%>' alt="">
+		</div>
+		<div class="ui horizontal list">
+	  		<div class="item">
+	    		<i class="imdb icon large"></i>
+	    		<div class="content">
+	      			<div class="header">IMDB-Rating:</div>
+	      			<%=data["imdbRating"]%>
+	    		</div>
+	  		</div>
+	  		<div class="item">
+	    		<i class="empty heart red icon large"></i>
+	    		<div class="content">
+	      			<div class="header">Rotten Tomatoes:</div>
+	      			<%=data["tomatoRating"]%>
+	    		</div>
+	  		</div>
+	  	</div>	
+	  	<div class="ui list">
+  			<div class="item">
+    			<div class="header">Genre:</div>
+    			<%=data["Genre"]%>
+  			</div>
+  			<div class="item">
+    			<div class="header">Plot:</div>
+    			<%=data["Plot"]%>
+  			</div>
+  		</div>
+	</div>	
+
+<% } %>
+
+<% include ./partials/footer %>
