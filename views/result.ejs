@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<h1>Results:</h1>
+
+<%console.log(data.length)%>
+
+<ul>
+	<li>
+		<%=data["Title"]%>
+	</li>
+	<li>
+		<%=data["Year"]%>
+	</li>
+	<li>
+		<%=data["Genre"]%>
+	</li>
+	<li>
+		<%=data["Plot"]%>		
+	</li>	
+</ul>
+<img src='<%=data["Poster"]%>' alt="">
+
+
+
+
+<% include ./partials/footer %>
