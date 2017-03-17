@@ -9,3 +9,6 @@ Back end: OMDB API, NodeJS (Express.Js, Request, EJS), JSON
 - Connect OMDB API with Node.Js with request and parse JSON to JS object.
 - styling, buttons, effects with SemanticUI
 
+## Try it out here:
+[https://oskarmovies.herokuapp.com/](https://oskarmovies.herokuapp.com/)
+
