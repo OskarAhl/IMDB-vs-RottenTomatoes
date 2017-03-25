@@ -1,6 +1,8 @@
 # Oskarmovies
 Similar to the Oscar rewards, this app also rates movies. Search engine where users can compare the IMDB rating vs the Rotten Tomatoes rating of movies by searching the movie title.
 
+OBS - OMDB API DOES NOT PROVIDE ROTTENTOMATOES RATING ANYMORE :(
+
 ## Stack:
 Front end: HTML, CSS, SemanticUI
 Back end: OMDB API, NodeJS (Express.Js, Request, EJS), JSON
